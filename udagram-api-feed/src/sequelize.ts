@@ -9,5 +9,11 @@ export const sequelize = new Sequelize({
   'host': config.host,
 
   'dialect': config.dialect,
+  'dialectOptions': {
+    'ssl': {
+      'require': true,
+      'rejectUnauthorized': false // You may need to adjust this based on your PostgreSQL server setup
+    }
+  },
   'storage': ':memory:',
 });
