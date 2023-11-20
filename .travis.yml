@@ -24,4 +24,3 @@ after_success:
   - docker push hauhuong/udagram-api-user
   - docker push hauhuong/udagram-api-feed
   - docker push hauhuong/udagram-frontend
-
