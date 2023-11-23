@@ -8,6 +8,6 @@ data:
   AWS_REGION: us-east-1
   JWT_SECRET: hello
   POSTGRES_DB: postgres
-  POSTGRES_HOST: myudagramdb.ca3wmfk8xuio.us-east-1.rds.amazonaws.com
+  POSTGRES_HOST: myudagramdb.cpi1mf6wyi5p.us-east-1.rds.amazonaws.com
   URL: http://localhost:8100
   NODE_OPTIONS: --max-old-space-size=1024

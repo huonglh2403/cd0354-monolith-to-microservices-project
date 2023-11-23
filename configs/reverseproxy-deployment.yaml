@@ -16,14 +16,14 @@ spec:
     spec:
       containers:
       - name: reverseproxy
-        image: /hauhuong/reverseproxy:latest
+        image: hauhuong/reverseproxy:latest
         ports:
         - containerPort: 80
         resources:
           limits: 
-            cpu: 500m
+            cpu: "500m"
           requests:
-            cpu: 200m
+            cpu: "200m"
         env:
         - name: URL
           valueFrom:
@@ -62,12 +62,12 @@ spec:
               key: POSTGRES_HOST
         - name: POSTGRES_PASSWORD
           valueFrom:
-            configMapKeyRef:
+            secretKeyRef:
               name: env-secret
               key: POSTGRES_PASSWORD
         - name: POSTGRES_USERNAME
           valueFrom:
-            configMapKeyRef:
+            secretKeyRef:
               name: env-secret
               key: POSTGRES_USERNAME
         - name: NODE_OPTIONS
@@ -75,3 +75,11 @@ spec:
             configMapKeyRef:
               name: env-config
               key: NODE_OPTIONS
+        volumeMounts:
+        - name: aws-secret
+          mountPath: "/root/.aws/"
+          readOnly: true
+      volumes:
+        - name: aws-secret
+          secret:
+            secretName: aws-secret
