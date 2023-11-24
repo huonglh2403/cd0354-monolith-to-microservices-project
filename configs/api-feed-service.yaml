@@ -6,7 +6,8 @@ metadata:
     run: api-feed
 spec:
   ports:
-  - port: 8080
-    protocol: TCP
+  - name: "8080"
+    port: 8080
+    target-port: 8080
   selector:
     run: api-feed

@@ -17,8 +17,6 @@ spec:
       containers:
       - name: frontend
         image: hauhuong/udagram-frontend:latest
-        ports:
-        - containerPort: 80
         resources:
           limits: 
             cpu: "500m"

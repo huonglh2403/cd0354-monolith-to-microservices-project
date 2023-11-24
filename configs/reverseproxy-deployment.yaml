@@ -17,8 +17,6 @@ spec:
       containers:
       - name: reverseproxy
         image: hauhuong/reverseproxy:latest
-        ports:
-        - containerPort: 80
         resources:
           limits: 
             cpu: "500m"

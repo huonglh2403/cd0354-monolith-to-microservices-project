@@ -17,8 +17,6 @@ spec:
       containers:
       - name: api-feed
         image: hauhuong/udagram-api-feed:latest
-        ports:
-        - containerPort: 80
         resources:
           limits: 
             cpu: "500m"
