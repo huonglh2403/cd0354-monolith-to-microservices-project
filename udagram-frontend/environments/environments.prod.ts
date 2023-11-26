@@ -1,1 +1,1 @@
-apiHost: 'http://a1ad861c6ea654543aa33fea41f7e3e4-2146629636.us-east-1.elb.amazonaws.com:8080/api/v0'
+apiHost: 'http://a4c8b15aa423a4172b8fafce357b3a1e-2039497706.us-east-1.elb.amazonaws.com:8080/api/v0'

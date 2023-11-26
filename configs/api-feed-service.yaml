@@ -3,11 +3,11 @@ kind: Service
 metadata:
   name: api-feed
   labels:
-    run: api-feed
+    service: api-feed
 spec:
   ports:
   - name: "8080"
     port: 8080
     targetPort: 8080
   selector:
-    run: api-feed
+    service: api-feed
